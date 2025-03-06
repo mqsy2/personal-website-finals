@@ -2,6 +2,8 @@
   <nav>
     <div class="nav-container">
       <div class="logo">My Website</div>
+
+      <!-- Desktop Navbar -->
       <div class="nav-links">
         <ul>
           <li><router-link to="/">Home</router-link></li>
@@ -10,10 +12,10 @@
         </ul>
       </div>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Dropdown Button -->
       <div class="dropdown">
         <button class="dropdown-btn" @click="toggleDropdown">☰</button>
-        <ul v-show="isDropdownOpen" class="dropdown-menu">
+        <ul v-if="isDropdownOpen" class="dropdown-menu">
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/about">About Me</router-link></li>
           <li><router-link to="/contact">Contact</router-link></li>
@@ -83,7 +85,7 @@ nav {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile Menu (Hidden on Desktop) */
+/* Mobile Menu */
 .dropdown {
   display: none;
   position: relative;
@@ -117,14 +119,6 @@ nav {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.dropdown-menu[style*="display: block"] {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .dropdown-menu li {
