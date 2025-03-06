@@ -1,38 +1,44 @@
 <template>
   <nav>
-    <div class="logo">My Website</div>
-    <button class="menu-btn" @click="toggleMenu">☰</button>
-    <ul :class="{ open: isMenuOpen }">
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about">About Me</router-link></li>
-      <li><router-link to="/contact">Contact</router-link></li>
-    </ul>
+    <div class="nav-container">
+      <div class="logo">My Website</div>
+      <div class="dropdown">
+        <button class="dropdown-btn" @click="toggleDropdown">☰ Menu</button>
+        <ul v-show="isDropdownOpen" class="dropdown-menu">
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/about">About Me</router-link></li>
+          <li><router-link to="/contact">Contact</router-link></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </template>
 
 <script setup>
 import { ref } from "vue";
 
-const isMenuOpen = ref(false);
+const isDropdownOpen = ref(false);
 
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value;
 };
 </script>
 
 <style scoped>
 /* Navbar Container */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: #222;
   padding: 12px 20px;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   max-width: 800px;
   margin: 10px auto;
-  overflow: hidden;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Logo */
@@ -42,70 +48,67 @@ nav {
   color: white;
 }
 
-/* Menu Button (Mobile) */
-.menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
+/* Dropdown Button */
+.dropdown-btn {
+  background: #444;
   color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
   cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
-/* Navigation Links */
-ul {
+.dropdown-btn:hover {
+  background: #555;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  background: #333;
   list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-  transition: transform 0.5s ease-in-out;
+  padding: 10px;
+  margin-top: 5px;
+  right: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-li {
-  list-style: none;
+.dropdown-menu li {
+  margin: 8px 0;
 }
 
-a {
+.dropdown-menu a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 12px;
-  border-radius: 8px;
+  display: block;
+  border-radius: 6px;
   transition: background 0.3s;
 }
 
-a:hover {
+.dropdown-menu a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile Styles: Sliding Menu */
+/* Mobile Styles */
 @media (max-width: 600px) {
-  nav {
+  .nav-container {
     flex-direction: column;
     align-items: center;
-    padding: 10px;
   }
 
-  .menu-btn {
-    display: block;
+  .dropdown {
+    margin-top: 10px;
   }
 
-  ul {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: #333;
-    width: 100%;
-    height: 50px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-100%);
-  }
-
-  ul.open {
-    transform: translateX(0);
+  .dropdown-menu {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 </style>
