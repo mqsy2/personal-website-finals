@@ -2,7 +2,7 @@
   <div class="home">
     <h1>Welcome to My Website</h1>
     <p>
-      I'm glad you're here! Explore my work, thoughts, and projects. 
+      I'm glad you're here! Explore my work, thoughts, and things about me. 
       Feel free to browse around and connect with me.
     </p>
   </div>
