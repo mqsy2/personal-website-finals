@@ -2,6 +2,15 @@
   <nav>
     <div class="nav-container">
       <div class="logo">My Website</div>
+      <div class="nav-links">
+        <ul>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/about">About Me</router-link></li>
+          <li><router-link to="/contact">Contact</router-link></li>
+        </ul>
+      </div>
+
+      <!-- Mobile Menu Button -->
       <div class="dropdown">
         <button class="dropdown-btn" @click="toggleDropdown">☰</button>
         <ul v-show="isDropdownOpen" class="dropdown-menu">
@@ -48,8 +57,35 @@ nav {
   color: white;
 }
 
-/* Dropdown Button (Right Side) */
+/* Desktop Navbar */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Menu (Hidden on Desktop) */
 .dropdown {
+  display: none;
   position: relative;
 }
 
@@ -68,7 +104,7 @@ nav {
   background: #555;
 }
 
-/* Dropdown Menu (Slides Down) */
+/* Mobile Dropdown Menu */
 .dropdown-menu {
   position: absolute;
   top: 40px;
@@ -79,18 +115,18 @@ nav {
   margin: 0;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Show the dropdown */
 .dropdown-menu[style*="display: block"] {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Dropdown Links */
 .dropdown-menu li {
   margin: 8px 0;
 }
@@ -111,8 +147,12 @@ nav {
 
 /* Mobile Styles */
 @media (max-width: 600px) {
-  .nav-container {
-    padding: 10px;
+  .nav-links {
+    display: none; /* Hide desktop links */
+  }
+
+  .dropdown {
+    display: block; /* Show mobile menu button */
   }
 }
 </style>
