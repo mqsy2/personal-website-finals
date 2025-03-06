@@ -56,11 +56,23 @@ nav {
   align-items: center;
 }
 
-/* Logo */
-.logo {
-  font-size: 22px;
-  font-weight: bold;
+/* Logo (My Website) */
+.logo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logo li {
+  display: inline;
+}
+
+.logo a {
   color: white;
+  text-decoration: none; /* Removes underline */
+  font-size: 22px; /* Keeps bold size */
+  font-weight: bold; /* Keeps bold style */
+  cursor: pointer; /* Ensures it still behaves as a link */
 }
 
 /* Desktop Navbar */
