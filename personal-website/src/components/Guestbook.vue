@@ -48,7 +48,7 @@ onMounted(fetchMessages);
 <style scoped>
 .guestbook {
   width: 90%;
-  max-width: 350px; /* Makes it long and slim */
+  max-width: 400px; /* Default width for desktop */
   margin: 40px auto;
   text-align: center;
   background: #fff;
@@ -78,7 +78,7 @@ input, textarea {
 
 textarea {
   resize: none;
-  height: 120px; /* Slightly taller for a better text input experience */
+  height: 120px;
 }
 
 button {
@@ -100,7 +100,7 @@ button:hover {
   margin-top: 25px;
   text-align: left;
   max-height: 400px;
-  overflow-y: auto; /* Allows scrolling for many messages */
+  overflow-y: auto;
   padding-right: 5px;
 }
 
@@ -121,5 +121,23 @@ strong {
   color: #0070f3;
   display: block;
   margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .guestbook {
+    width: 95%;
+    max-width: none;
+    padding: 20px;
+  }
+
+  textarea {
+    height: 100px; /* Slightly smaller text area for mobile */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 </style>
