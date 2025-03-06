@@ -17,6 +17,9 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: center; /* Centers items inside */
+  align-items: center;
+
 }
 li {
   margin-right: 20px;
