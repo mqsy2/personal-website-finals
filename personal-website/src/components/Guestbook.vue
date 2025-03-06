@@ -7,7 +7,7 @@
     </form>
 
     <div v-if="messages.length" class="message-list">
-      <h3>Messages</h3>
+      <h3>Comments</h3>
       <ul>
         <li v-for="msg in messages" :key="msg.id">
           <strong>{{ msg.name }}</strong>
