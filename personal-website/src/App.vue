@@ -11,7 +11,7 @@ import Navbar from './components/Navbar.vue';
   </div>
 </template>
 
-<style scoped>
+<style>
 /* Dark background for the whole website */
 .app-container {
   background-color: #121212; /* Dark gray/black */
