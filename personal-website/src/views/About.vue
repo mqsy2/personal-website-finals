@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="profile">
-      <img src="https://via.placeholder.com/150" alt="Profile Picture" />
+      <img src="https://raw.githubusercontent.com/mqsy2/personal-website-finals/main/images/472067468_1142773223985589_5416666476238467940_n.jpg" alt="Profile Picture" />
       <h1>Hi, I'm [Your Name] 👋</h1>
       <p>
         I'm a passionate [Your Profession or Hobby] who loves to create and explore new technologies.
@@ -13,17 +13,18 @@
       <h2>💡 Skills & Expertise</h2>
       <ul>
         <li>Frontend Development (Vue.js, React, HTML, CSS, JavaScript)</li>
-        <li>Backend Development (Node.js, Express, Supabase, Firebase)</li>
-        <li>UI/UX Design (Figma, Adobe XD)</li>
-        <li>Linux & Virtualization (VirtualBox, Ubuntu, Bash Scripting)</li>
+        <li>Backend Development (Supabase)</li>
+        <li>UI/UX Design (Figma, Adobe)</li>
+        <li>Linux & Virtualization (VirtualBox, Ubuntu)</li>
+        <li>Animation(NC II certificate)</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>🎯 Interests & Hobbies</h2>
       <ul>
-        <li>🚀 Exploring new technologies</li>
-        <li>🎨 Designing user-friendly interfaces</li>
+        <li>🖥️ Building Comuters</li>
+        <li>🎨 Animation</li>
         <li>📸 Photography & Digital Art</li>
         <li>🎮 Playing video games</li>
         <li>🧳 Traveling & experiencing new cultures</li>
@@ -33,9 +34,9 @@
     <div class="section">
       <h2>📬 Get in Touch</h2>
       <p>I'm always open to new opportunities, collaborations, or just a friendly chat.</p>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+      <p>Email: <a href="mqsy2@student.apc.edu.ph">mqsy2@student.apc.edu.ph</a></p>
+      <p>GitHub: <a href="https://github.com/mqsy2" target="_blank">https://github.com/mqsy2</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/moises-james-sy-46210928a/" target="_blank">https://www.linkedin.com/in/moises-james-sy-46210928a/</a></p>
     </div>
   </div>
 </template>
