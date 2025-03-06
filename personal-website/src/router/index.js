@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '/workspaces/personal-website-finals/personal-website/src/view/home.vue';
-import About from '/workspaces/personal-website-finals/personal-website/src/view/aboutus.vue';
+import Home from '../view/home.vue';
+import About from '../view/aboutus.vue';
 
 const routes = [
-  { path: '/home', component: Home },
+  { path: '/', component: Home },
   { path: '/about', component: About },
 ];
 
