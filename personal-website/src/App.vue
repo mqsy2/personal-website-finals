@@ -4,10 +4,12 @@ import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <Navbar />
-  <router-view />
-  <div class="guestbook-container">
-    <Guestbook />
+  <div class="app-container">
+    <Navbar />
+    <router-view />
+    <div class="guestbook-container">
+      <Guestbook />
+    </div>
   </div>
 </template>
 
@@ -23,11 +25,12 @@ import Navbar from './components/Navbar.vue';
   justify-content: center;
 }
 
+/* Center Guestbook */
 .guestbook-container {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically if needed */
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-top: 20px; /* Adjust spacing */
+  margin-top: 20px;
 }
 </style>
