@@ -47,12 +47,13 @@ onMounted(fetchMessages);
 
 <style scoped>
 .guestbook {
-  max-width: 400px;
-  margin: auto;
+  width: 90%;
+  max-width: 350px; /* Makes it long and slim */
+  margin: 40px auto;
   text-align: center;
   background: #fff;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -64,29 +65,29 @@ h2, h3 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 input, textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 textarea {
   resize: none;
-  height: 80px;
+  height: 120px; /* Slightly taller for a better text input experience */
 }
 
 button {
-  padding: 10px;
+  padding: 12px;
   background: #0070f3;
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -96,8 +97,11 @@ button:hover {
 }
 
 .message-list {
-  margin-top: 20px;
+  margin-top: 25px;
   text-align: left;
+  max-height: 400px;
+  overflow-y: auto; /* Allows scrolling for many messages */
+  padding-right: 5px;
 }
 
 ul {
@@ -107,10 +111,10 @@ ul {
 
 li {
   background: #f9f9f9;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  font-size: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
 }
 
 strong {
