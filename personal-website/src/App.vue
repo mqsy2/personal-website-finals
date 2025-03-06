@@ -1,6 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Guestbook from './components/Guestbook.vue'
 </script>
 
 <template>
@@ -13,7 +12,7 @@ import TheWelcome from './components/TheWelcome.vue'
   </header>
 
   <main>
-    <TheWelcome />
+    <Guestbook />
   </main>
 </template>
 
