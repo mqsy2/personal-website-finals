@@ -5,6 +5,7 @@
     <ul :class="{ open: isMenuOpen }">
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/about">About Me</router-link></li>
+      <li><router-link to="/contact">Contact</router-link></li>
     </ul>
   </nav>
 </template>
@@ -31,6 +32,7 @@ nav {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   max-width: 800px;
   margin: 10px auto;
+  overflow: hidden;
 }
 
 /* Logo */
@@ -57,6 +59,7 @@ ul {
   gap: 20px;
   padding: 0;
   margin: 0;
+  transition: transform 0.5s ease-in-out;
 }
 
 li {
@@ -76,7 +79,7 @@ a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile Styles */
+/* Mobile Styles: Sliding Menu */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
@@ -89,19 +92,20 @@ a:hover {
   }
 
   ul {
-    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #333;
     width: 100%;
-    text-align: center;
-    display: none;
+    height: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
   }
 
   ul.open {
-    display: flex;
-    margin-top: 10px;
-  }
-
-  li {
-    margin-bottom: 10px;
+    transform: translateX(0);
   }
 }
 </style>
