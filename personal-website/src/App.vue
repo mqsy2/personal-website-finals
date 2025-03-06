@@ -17,8 +17,19 @@ import Guestbook from './components/Guestbook.vue'
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
 </style>
