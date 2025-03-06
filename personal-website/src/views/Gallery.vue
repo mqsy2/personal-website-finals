@@ -24,10 +24,10 @@
   
   // Sample gallery images (replace with real ones)
   const images = ref([
-    "https://github.com/mqsy2/personal-website-finals/blob/main/images/Screenshot%202024-12-27%20161929.png",
-    "https://github.com/mqsy2/personal-website-finals/blob/main/images/472067468_1142773223985589_5416666476238467940_n.jpg",
-    "https://github.com/mqsy2/personal-website-finals/blob/main/images/462548964_923083979293465_8359046881417788200_n.jpg",
-    "https://github.com/mqsy2/personal-website-finals/blob/main/images/462548552_1217492629360108_4695080992433292870_n.jpg",
+    "https://raw.githubusercontent.com/mqsy2/personal-website-finals/main/images/Screenshot%202024-12-27%20161929.png",
+    "https://raw.githubusercontent.com/mqsy2/personal-website-finals/main/images/472067468_1142773223985589_5416666476238467940_n.jpg",
+    "https://raw.githubusercontent.com/mqsy2/personal-website-finals/main/images/462548964_923083979293465_8359046881417788200_n.jpg",
+    "https://raw.githubusercontent.com/mqsy2/personal-website-finals/main/images/462548552_1217492629360108_4695080992433292870_n.jpg",
   ]);
   
   const lightboxOpen = ref(false);
