@@ -6,8 +6,8 @@ import Guestbook from './components/Guestbook.vue'
   <header>
     <nav>
       <ul>
-        <li><router-link to="./view/home.vue">Home</router-link></li>
-        <li><router-link to="./view/aboutus.vue">About Me</router-link></li>
+        <li><router-link to="/home">Home</router-link></li>
+        <li><router-link to="/about">About Me</router-link></li>
       </ul>
     </nav>
   </header>
