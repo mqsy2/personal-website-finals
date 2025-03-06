@@ -1,11 +1,12 @@
 <script setup>
 import Guestbook from './components/Guestbook.vue'
-import Navbar from './components/Navbar.vue'
+import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
+  <Navbar />
+  <router-view />
   <main>
-    <Navbar />
     <Guestbook />
   </main>
 </template>
