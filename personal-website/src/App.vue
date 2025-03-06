@@ -12,6 +12,17 @@ import Navbar from './components/Navbar.vue';
 </template>
 
 <style scoped>
+/* Dark background for the whole website */
+.app-container {
+  background-color: #121212; /* Dark gray/black */
+  color: #ffffff; /* Light text for contrast */
+  min-height: 100vh; /* Ensures full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .guestbook-container {
   display: flex;
   justify-content: center; /* Centers horizontally */
