@@ -12,7 +12,7 @@
         <ul>
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/about">About Me</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
+          <li><router-link to="/gallery">Gallery</router-link></li>
         </ul>
       </div>
 
@@ -22,7 +22,7 @@
         <ul v-if="isDropdownOpen" class="dropdown-menu">
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/about">About Me</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
+          <li><router-link to="/gallery">Gallery</router-link></li>
         </ul>
       </div>
     </div>
