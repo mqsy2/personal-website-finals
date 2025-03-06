@@ -3,7 +3,7 @@
     <div class="nav-container">
       <div class="logo">
         <ul>
-          <li><router-link to="/">My Website</router-link></li>
+          <li><router-link to="/">My Personal Website</router-link></li>
         </ul>
       </div>
 

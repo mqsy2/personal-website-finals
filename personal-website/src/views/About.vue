@@ -2,7 +2,7 @@
   <div class="about">
     <div class="profile">
       <img src="https://raw.githubusercontent.com/mqsy2/personal-website-finals/main/images/472067468_1142773223985589_5416666476238467940_n.jpg" alt="Profile Picture" />
-      <h1>Hi, I'm [Your Name] 👋</h1>
+      <h1>Hi, I'm Moises James Q. Sy 👋</h1>
       <p>
         I'm a passionate [Your Profession or Hobby] who loves to create and explore new technologies.
         Welcome to my personal website!
