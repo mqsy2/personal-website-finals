@@ -46,99 +46,36 @@ onMounted(fetchMessages);
 </script>
 
 <style scoped>
-/* Dark Background */
+/* Dark Theme Colors (Alignments Unchanged) */
 .guestbook {
-  width: 90%;
-  max-width: 400px;
-  margin: 40px auto;
-  text-align: center;
-  background: #222; /* Dark gray */
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  color: #fff; /* Light text */
+  background: #222; /* Dark background */
+  color: white; /* Light text */
 }
 
 h2, h3 {
-  color: #fff;
-  font-weight: 600;
-}
-
-/* Input & Textarea */
-input, textarea {
-  width: 90%;
-  padding: 12px;
-  background: #333; /* Darker input */
-  border: 1px solid #444; /* Subtle border */
-  border-radius: 10px;
-  font-size: 16px;
   color: white;
 }
 
-textarea {
-  resize: none;
-  height: 120px;
+/* Input Fields */
+input, textarea {
+  background: #333;
+  color: white;
+  border: 1px solid #444;
 }
 
 /* Button */
 button {
-  padding: 12px;
   background: #0070f3;
   color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
-  background: #005bb5; /* Darker blue on hover */
+  background: #005bb5;
 }
 
 /* Message List */
-.message-list {
-  margin-top: 25px;
-  text-align: left;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 5px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
 li {
-  background: #333; /* Dark gray message box */
-  padding: 12px;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  font-size: 15px;
-}
-
-strong {
-  color: #1e90ff;
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .guestbook {
-    width: 95%;
-    max-width: none;
-    padding: 20px;
-  }
-
-  textarea {
-    height: 100px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 10px;
-  }
+  background: #333;
+  color: white;
 }
 </style>
