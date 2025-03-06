@@ -4,25 +4,29 @@ import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <Navbar />
-  <router-view />
-  <Guestbook />
+  <div class="container">
+    <Navbar />
+    <main>
+      <router-view />
+      <Guestbook />
+    </main>
+  </div>
 </template>
 
-<style scoped>
-nav ul {
-  list-style: none;
+<style>
+/* Center everything */
+.container {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  min-height: 100vh; /* Full height */
+  text-align: center; /* Ensure text is centered */
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-nav a:hover {
-  text-decoration: underline;
+main {
+  max-width: 800px; /* Keep content readable */
+  width: 100%;
+  padding: 20px;
 }
 </style>
