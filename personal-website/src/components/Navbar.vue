@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="nav-container">
-      <div class="logo"><router-link to="/">My Website</router-link></div>
+      <div class="logo"><ul><router-link to="/">My Website</router-link></ul></div>
 
       <!-- Desktop Navbar -->
       <div class="nav-links">
