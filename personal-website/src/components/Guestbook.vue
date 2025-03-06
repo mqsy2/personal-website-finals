@@ -1,9 +1,8 @@
 <template>
   <div class="guestbook">
-    <h2>Guestbook</h2>
     <form @submit.prevent="submitMessage">
       <input v-model="name" placeholder="Your Name" required />
-      <textarea v-model="message" placeholder="Your Message" required></textarea>
+      <textarea v-model="message" placeholder="Write a comment" required></textarea>
       <button type="submit">Post</button>
     </form>
 
