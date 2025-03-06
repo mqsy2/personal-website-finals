@@ -69,7 +69,7 @@ form {
 }
 
 input, textarea {
-  width: 100%;
+  width: 80%;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 10px;
