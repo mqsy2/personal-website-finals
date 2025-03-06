@@ -3,7 +3,7 @@ import Home from '../view/home.vue';
 import About from '../view/aboutus.vue';
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/home', component: Home },
   { path: '/about', component: About },
 ];
 
