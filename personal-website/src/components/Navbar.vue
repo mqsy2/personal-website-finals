@@ -1,7 +1,11 @@
 <template>
   <nav>
     <div class="nav-container">
-      <div class="logo"><ul><router-link to="/">My Website</router-link></ul></div>
+      <div class="logo">
+        <ul>
+          <li><router-link to="/">My Website</router-link></li>
+        </ul>
+      </div>
 
       <!-- Desktop Navbar -->
       <div class="nav-links">
