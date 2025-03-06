@@ -1,3 +1,24 @@
+<template>
+  <div class="guestbook">
+    <h2>Guestbook</h2>
+    <form @submit.prevent="submitMessage">
+      <input v-model="name" placeholder="Your Name" required />
+      <textarea v-model="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Post</button>
+    </form>
+
+    <div v-if="messages.length" class="message-list">
+      <h3>Messages</h3>
+      <ul>
+        <li v-for="msg in messages" :key="msg.id">
+          <strong>{{ msg.name }}</strong>
+          <p>{{ msg.message }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { ref, onMounted } from "vue";
 import { supabase } from "../supabase";
@@ -24,42 +45,22 @@ const submitMessage = async () => {
 onMounted(fetchMessages);
 </script>
 
-<template>
-  <div class="guestbook">
-    <h2>Guestbook</h2>
-    <form @submit.prevent="submitMessage">
-      <input v-model="name" placeholder="Your Name" required />
-      <textarea v-model="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Post</button>
-    </form>
-
-    <div v-if="messages.length" class="message-list">
-      <h3>Messages</h3>
-      <ul>
-        <li v-for="msg in messages" :key="msg.id">
-          <strong>{{ msg.name }}</strong>
-          <p>{{ msg.message }}</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</template>
-
 <style scoped>
+/* Dark Theme Colors */
 .guestbook {
   width: 90%;
-  max-width: 400px; /* Default width for desktop */
+  max-width: 400px;
   margin: 40px auto;
   text-align: center;
-  background: #fff;
+  background: #222; /* Dark background */
+  color: white; /* Light text */
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 h2, h3 {
-  color: #333;
-  font-weight: 600;
+  color: white;
 }
 
 form {
@@ -68,10 +69,13 @@ form {
   gap: 12px;
 }
 
+/* Dark Input Fields */
 input, textarea {
   width: 90%;
+  background: #333;
+  color: white;
+  border: 1px solid #444;
   padding: 12px;
-  border: 1px solid #ddd;
   border-radius: 10px;
   font-size: 16px;
 }
@@ -81,6 +85,7 @@ textarea {
   height: 120px;
 }
 
+/* Dark Button */
 button {
   padding: 12px;
   background: #0070f3;
@@ -96,6 +101,7 @@ button:hover {
   background: #005bb5;
 }
 
+/* Dark Messages Box */
 .message-list {
   margin-top: 25px;
   text-align: left;
@@ -110,7 +116,8 @@ ul {
 }
 
 li {
-  background: #f9f9f9;
+  background: #333;
+  color: white;
   padding: 12px;
   border-radius: 10px;
   margin-bottom: 12px;
@@ -118,7 +125,7 @@ li {
 }
 
 strong {
-  color: #0070f3;
+  color: #1e90ff;
   display: block;
   margin-bottom: 5px;
 }
@@ -132,7 +139,7 @@ strong {
   }
 
   textarea {
-    height: 100px; /* Slightly smaller text area for mobile */
+    height: 100px;
   }
 
   button {
